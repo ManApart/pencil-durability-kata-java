@@ -6,6 +6,6 @@ public class Paper {
     }
 
     public void addText(String text) {
-        this.text = text;
+        this.text += text;
     }
 }
