@@ -9,7 +9,12 @@ public class Pencil {
 
     public void write(String text, Paper paper) {
         for (char letter : text.toCharArray()) {
-            currentDurability--;
+            if (Character.isUpperCase(letter)) {
+                currentDurability -= 2;
+            } else {
+                currentDurability--;
+            }
+
             paper.addText(new String(new char[]{letter}));
         }
     }

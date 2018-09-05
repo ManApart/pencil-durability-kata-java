@@ -48,4 +48,14 @@ public class WriteOnPaperTest {
         Assert.assertEquals(400 - input.length(), pencil.getCurrentDurability());
     }
 
+    @Test
+    public void pencilLosesDurabilityAsItWritesCapitalLetters() {
+        String input = "INPUT";
+
+        Paper paper = new Paper();
+        pencil.write(input, paper);
+
+        Assert.assertEquals(400 - 2*input.length(), pencil.getCurrentDurability());
+    }
+
 }
