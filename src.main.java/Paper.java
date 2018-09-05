@@ -1,6 +1,11 @@
 public class Paper {
+    String text = "";
 
     public String getPage() {
-        return "She sell sea shells";
+        return text;
+    }
+
+    public void addText(String text) {
+        this.text = text;
     }
 }

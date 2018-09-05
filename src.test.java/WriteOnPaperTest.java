@@ -14,4 +14,15 @@ public class WriteOnPaperTest {
         Assert.assertEquals(input, paper.getPage());
     }
 
+    @Test
+    public void pencilWritesTextToPaper() {
+        Pencil pencil = new Pencil();
+        String input = "Down by the sea shore";
+
+        Paper paper = new Paper();
+        pencil.write(input, paper);
+
+        Assert.assertEquals(input, paper.getPage());
+    }
+
 }
